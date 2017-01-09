@@ -84,10 +84,6 @@ public class Picture extends SimplePicture
 		}
 
 	}
-	public Picture(int width, int height, Color theColor){
-		this(width,height);
-		setAllPixelsToAColor(theColor);
-	}
 	public Picture(Pixel[][] pixels){
 		this(500,640);
 		Pixel fromPixel = null;

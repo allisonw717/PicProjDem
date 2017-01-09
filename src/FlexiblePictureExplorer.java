@@ -894,7 +894,7 @@ public abstract class FlexiblePictureExplorer extends SimplePicture implements M
    */
   public static void main( String args[]) throws InterruptedException
   {
-    Picture pix = new Picture(600,600,Color.black);
+    Picture pix = new Picture(600,600);
     FlexiblePictureExplorer expl = new FlexiblePictureExplorer(pix){
     	public void mouseClickedAction(DigitalPicture pict, Pixel pix) {
     		  System.out.println("I got clicked on with pixel "+pix);
