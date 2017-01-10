@@ -18,8 +18,8 @@ public class MainScreen extends FlexiblePictureExplorer implements ImageObserver
 															{path+"FINDTHIS.jpg"},
 															{path+"Gender-Symbol.jpg",path+"Trans-Pride.jpg",path+"boy-and-girl-playing.jpg",path+"Gender-Dysphoria.jpg",path+"brain.jpg",path+"Transition.jpg",path+"FINDTHIS.jpg",path+"Discrimination.png",path+"FINDTHIS.jpg"}},
 															{{path+"clipart-earth.png",path+"earth.jpg",path+"GSA.jpg",path+"OWL.jpg",path+"Trans-Lifeline.png",path+"FINDTHIS.jpg",path+"PFLAG-Picture.PNG",path+"pastoral-care.jpg"},
-															{path+"Chalice.jpg",path+"FINDTHIS.jpg",path+"UUA.jpg",path+"FINDTHIS.jpg",path+"Seven-UU-Principles.jpg",path+"Religion-Collage.png",path+"UUCC-Logo.PNG"},
-															{path+"Boardgame.gif"}}};
+															{path+"Chalice.png",path+"Menorah.png",path+"UUA-Logo.png",path+"Sunburst.png",path+"Seven-UU-Principles.jpg",path+"Religions-Collage.png",path+"UUCC.png"},
+															{path+"Boardgame.png",path+"Power-Grid.png",path+"Library.png",path+"Writing.png",path+"Sports.png",path+"Aerial-Silks.png",path+"Trail.png"}}};
 	private int row;
 	private int col;
 	private int depth;
@@ -39,7 +39,7 @@ public class MainScreen extends FlexiblePictureExplorer implements ImageObserver
 			for (int y = 0; y < 3; y++) {
 				Picture pict;
 				pict = new Picture(images[x][y][0]);
-				graphics.drawImage(pict.getBufferedImage(), 200*x, 200*y, this);
+				graphics.drawImage(pict.getBufferedImage(), 200*y, 200*x, this);
 			}
 		}
 
