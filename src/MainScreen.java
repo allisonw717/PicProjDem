@@ -12,9 +12,9 @@ import java.text.*;
 
 public class MainScreen extends FlexiblePictureExplorer implements ImageObserver {
 	private String path = "slideshow\\";
-	private final String[][][] images = new String[][][] {{{path+"childhood.jpg",path+"FINDTHIS.jpg",path+"Nassau Hall.jpg",path+"Amtrak.jpg",path+"Plane.jpg",path+"Jane.jpg",path+"TravelCollage.jpg",path+"Cat.jpg",path+"watermelon-tourmaline.jpg",path+"Littlebrook.PNG",path+"Princeton-Day-School.PNG",path+"Bucks-Rock.jpg",path+"graduation.jpg"},
+	private final String[][][] images = new String[][][] {{{path+"childhood.jpg",path+"PrincetonMap.png",path+"Nassau Hall.jpg",path+"Amtrak.jpg",path+"Plane.jpg",path+"Jane.jpg",path+"TravelCollage.jpg",path+"Cat.jpg",path+"watermelon-touramline.jpg",path+"Littlebrook.PNG",path+"Princeton-Day-School.PNG",path+"Bucks-Rock.jpg",path+"graduation.jpg"},
 															{path+"school.jpg",path+"Brown.jpg",path+"formula.jpg",path+"IBM.jpg",path+"StonyBrook.jpg",path+"Generic-Diploma.jpg",path+"Temp-ui.jpg"},
-															{path+"HubbleClipArt.jpg",path+"maryland-road-map.gif",path+"STSI.jpg",path+"hubble.jpg",path+"JHU.jpg",path+"Schedule.jpg",path+"FINDTHIS.jpg",path+"auditorium.jpg"}},
+															{path+"HubbleClipArt.jpg",path+"maryland.png",path+"STSI.jpg",path+"hubble.jpg",path+"JHU.jpg",path+"Schedule.jpg",path+"FINDTHIS.jpg",path+"auditorium.jpg"}},
 															{{path+"family.jpg",path+"wedding.png",path+"timonium.png",path+"Matt.jpg",path+"Rachel.jpg",path+"Ellicott.PNG",path+"Guinea Pigs.jpg",path+"centennial.png",path+"Columbia.PNG"},
 															{path+"teacher.jpg"},
 															{path+"Gender-Symbol.jpg",path+"Trans-Pride.jpg",path+"boy-and-girl-playing.jpg",path+"Gender-Dysphoria.jpg",path+"brain.jpg",path+"Transition.jpg",path+"FINDTHIS.jpg",path+"Discrimination.png",path+"FINDTHIS.jpg"}},
@@ -63,7 +63,14 @@ public class MainScreen extends FlexiblePictureExplorer implements ImageObserver
 		int y = (600 - photo.getHeight())/2;
 		graphics.drawImage(photo.getBufferedImage(), x, y, this);
 		Picture arrows = new Picture("src\\arrows.png");
-		graphics.drawImage(arrows.getBufferedImage(),0,600,this);
+		Picture left = new Picture("src\\leftOnly.png");
+		Picture right = new Picture("src\\rightOnly.png");
+		if(depth == 1)
+			graphics.drawImage(right.getBufferedImage(),0,600,this);
+		else if(depth == images[row][col].length-1)
+			graphics.drawImage(left.getBufferedImage(),0,600,this);
+		else
+			graphics.drawImage(arrows.getBufferedImage(),0,600,this);
 		setImage(disp);
 		setTitle("All About Me");
 	}
