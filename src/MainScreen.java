@@ -1,4 +1,5 @@
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.FontMetrics;
 import java.awt.Graphics2D;
 import java.awt.Image;
@@ -14,7 +15,7 @@ public class MainScreen extends FlexiblePictureExplorer implements ImageObserver
 	private final String[][][] images = new String[][][] {{{path+"childhood.jpg",path+"FINDTHIS.jpg",path+"Nassau Hall.jpg",path+"Amtrak.jpg",path+"Plane.jpg",path+"Jane.jpg",path+"TravelCollage.jpg",path+"Cat.jpg",path+"watermelon-tourmaline.jpg",path+"Littlebrook.PNG",path+"Princeton-Day-School.PNG",path+"Bucks-Rock.jpg",path+"graduation.jpg"},
 															{path+"school.jpg",path+"Brown.jpg",path+"formula.jpg",path+"IBM.jpg",path+"StonyBrook.jpg",path+"Generic-Diploma.jpg",path+"Temp-ui.jpg"},
 															{path+"HubbleClipArt.jpg",path+"maryland-road-map.gif",path+"STSI.jpg",path+"hubble.jpg",path+"JHU.jpg",path+"Schedule.jpg",path+"FINDTHIS.jpg",path+"auditorium.jpg"}},
-															{{path+"family.jpg",path+"FINDTHIS.jpg",path+"timonium.png",path+"Matt.jpg",path+"Rachel.jpg",path+"Ellicott.PNG",path+"Guinea Pigs.jpg",path+"centennial.png",path+"Columbia.PNG"},
+															{{path+"family.jpg",path+"wedding.png",path+"timonium.png",path+"Matt.jpg",path+"Rachel.jpg",path+"Ellicott.PNG",path+"Guinea Pigs.jpg",path+"centennial.png",path+"Columbia.PNG"},
 															{path+"teacher.jpg"},
 															{path+"Gender-Symbol.jpg",path+"Trans-Pride.jpg",path+"boy-and-girl-playing.jpg",path+"Gender-Dysphoria.jpg",path+"brain.jpg",path+"Transition.jpg",path+"FINDTHIS.jpg",path+"Discrimination.png",path+"FINDTHIS.jpg"}},
 															{{path+"ClipArtEarth.jpg",path+"planetEarth.jpg",path+"GSA.jpg",path+"OWL.jpg",path+"Trans-Lifeline.png",path+"FINDTHIS.jpg",path+"PFLAG-Picture.PNG",path+"pastoral-care.jpg"},
@@ -34,8 +35,11 @@ public class MainScreen extends FlexiblePictureExplorer implements ImageObserver
 	}
 	private void displayMain() {
 		main = true;
-		Picture disp = new Picture(600, 600);
+		Picture disp = new Picture(700, 600);
 		Graphics2D graphics = disp.createGraphics();
+		graphics.setColor(Color.black);
+		graphics.setFont(new Font("Times", Font.BOLD, 26));
+		graphics.drawString("Choose a catagory to learn more about me!", 60, 650);
 		for (int x = 0; x < 3; x++) {
 			for (int y = 0; y < 3; y++) {
 				Picture pict;
