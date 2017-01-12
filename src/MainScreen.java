@@ -14,11 +14,11 @@ public class MainScreen extends FlexiblePictureExplorer implements ImageObserver
 	private String path = "slideshow\\";
 	private final String[][][] images = new String[][][] {{{path+"childhood.jpg",path+"PrincetonMap.png",path+"Nassau Hall.jpg",path+"Amtrak.jpg",path+"Plane.jpg",path+"Jane.jpg",path+"TravelCollage.jpg",path+"Cat.jpg",path+"watermelon-touramline.jpg",path+"Littlebrook.PNG",path+"Princeton-Day-School.PNG",path+"Bucks-Rock.jpg",path+"graduation.jpg"},
 															{path+"school.jpg",path+"Brown.jpg",path+"formula.jpg",path+"IBM.jpg",path+"StonyBrook.jpg",path+"Generic-Diploma.jpg",path+"Temp-ui.jpg"},
-															{path+"HubbleClipArt.jpg",path+"maryland.png",path+"STSI.jpg",path+"hubble.jpg",path+"JHU.jpg",path+"Schedule.jpg",path+"FINDTHIS.jpg",path+"auditorium.jpg"}},
+															{path+"HubbleClipArt.jpg",path+"maryland.png",path+"STSI.jpg",path+"hubble.jpg",path+"JHU.jpg",path+"Schedule.jpg",path+"nebula.png",path+"auditorium.jpg"}},
 															{{path+"family.jpg",path+"wedding.png",path+"timonium.png",path+"Matt.jpg",path+"Rachel.jpg",path+"Ellicott.PNG",path+"Guinea Pigs.jpg",path+"centennial.png",path+"Columbia.PNG"},
-															{path+"teacher.jpg",path+"chsroom.jpg"},
+															{path+"teacher.jpg",path+"chsroom.jpg",path+"student-crowd.png",path+"returning-student.png",path+"nutrition.png",path+"homework.png",path+"flashcards.png",path+"student-at-computer.png",path+"celebration.png",path+"centennial-graduation.png"},
 															{path+"Gender-Symbol.jpg",path+"Trans-Pride.jpg",path+"boy-and-girl-playing.jpg",path+"Gender-Dysphoria.jpg",path+"brain.jpg",path+"Transition.jpg",path+"FINDTHIS.jpg",path+"Discrimination.png",path+"FINDTHIS.jpg"}},
-															{{path+"ClipArtEarth.jpg",path+"planetEarth.jpg",path+"GSA.jpg",path+"OWL.jpg",path+"Trans-Lifeline.png",path+"FINDTHIS.jpg",path+"PFLAG-Picture.PNG",path+"pastoral-care.jpg"},
+															{{path+"ClipArtEarth.jpg",path+"planetEarth.jpg",path+"GSA.jpg",path+"OWL.jpg",path+"Trans-Lifeline.png",path+"career-collage.png",path+"PFLAG-Picture.PNG",path+"pastoral-care.jpg"},
 															{path+"Chalice.png",path+"Menorah.png",path+"UUA-Logo.png",path+"Sunburst.png",path+"Seven-UU-Principles.jpg",path+"Religions-Collage.png",path+"UUCC.png"},
 															{path+"Boardgame.png",path+"Power-Grid.png",path+"Library.png",path+"Writing.png",path+"Sports.png",path+"Aerial-Silks.png",path+"Trail.png"}}};
 
