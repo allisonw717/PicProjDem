@@ -1,13 +1,8 @@
 import java.awt.Color;
 import java.awt.Font;
-import java.awt.FontMetrics;
 import java.awt.Graphics2D;
 import java.awt.Image;
-import java.awt.font.FontRenderContext;
-import java.awt.font.LineBreakMeasurer;
-import java.awt.font.TextLayout;
 import java.awt.image.ImageObserver;
-import java.text.*;
 
 
 public class MainScreen extends FlexiblePictureExplorer implements ImageObserver {
