@@ -14,7 +14,7 @@ public class MainScreen extends FlexiblePictureExplorer implements ImageObserver
 															{path+"teacher.jpg",path+"chsroom.jpg",path+"student-crowd.png",path+"returning-student.png",path+"nutrition.png",path+"homework.png",path+"flashcards.png",path+"student-at-computer.png",path+"celebration.png",path+"centennial-graduation.png"},
 															{path+"Gender-Symbol.jpg",path+"Trans-Pride.jpg",path+"boy-and-girl-playing.jpg",path+"Gender-Dysphoria.jpg",path+"brain.jpg",path+"Transition.jpg",path+"career-collage.png",path+"Discrimination.png",path+"famous-transgender-people.png"}},
 															{{path+"ClipArtEarth.jpg",path+"planetEarth.jpg",path+"GSA.jpg",path+"OWL.jpg",path+"Trans-Lifeline.png",path+"support-group.png",path+"PFLAG-Picture.PNG",path+"pastoral-care.jpg"},
-															{path+"Chalice.png",path+"Menorah.png",path+"UUA-Logo.png",path+"Sunburst.png",path+"Seven-UU-Principles.jpg",path+"Religions-Collage.png",path+"UUCC.png"},
+															{path+"Chalice.png",path+"Menorah.png",path+"UUA-Logo.png",path+"Sunburst.png",path+"Seven-UU-Principles.png",path+"Religions-Collage.png",path+"UUCC.png"},
 															{path+"Boardgame.png",path+"Power-Grid.png",path+"Library.png",path+"Writing.png",path+"Sports.png",path+"Aerial-Silks.png",path+"Trail.png"}}};
 
 	private int row;
