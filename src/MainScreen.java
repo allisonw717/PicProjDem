@@ -76,7 +76,7 @@ public class MainScreen extends FlexiblePictureExplorer implements ImageObserver
 	}
 
 	public void mouseClickedAction(DigitalPicture pict, Pixel pix) {
-		if(main){
+		if(main && pix.getY()<600){
 			row = (int) pix.getY()/200;
 			col = (int) pix.getX()/200;
 			depth = 1;
