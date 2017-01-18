@@ -6,16 +6,16 @@ import java.awt.image.ImageObserver;
 
 
 public class MainScreen extends FlexiblePictureExplorer implements ImageObserver {
-	private String path = "slideshow\\";
-	private final String[][][] images = new String[][][] {{{path+"childhood.jpg",path+"PrincetonMap.png",path+"Nassau Hall.jpg",path+"Amtrak.jpg",path+"Plane.jpg",path+"Jane.jpg",path+"TravelCollage.jpg",path+"Cat.jpg",path+"watermelon-touramline.jpg",path+"Littlebrook.PNG",path+"Princeton-Day-School.PNG",path+"Bucks-Rock.jpg",path+"graduation.jpg"},
-															{path+"school.jpg",path+"Brown.jpg",path+"formula.jpg",path+"IBM.jpg",path+"StonyBrook.jpg",path+"Generic-Diploma.jpg",path+"Temp-ui.jpg"},
-															{path+"HubbleClipArt.jpg",path+"maryland.png",path+"STSI.jpg",path+"hubble.jpg",path+"JHU.jpg",path+"Schedule.jpg",path+"nebula.png",path+"auditorium.jpg"}},
-															{{path+"family.jpg",path+"wedding.png",path+"timonium.png",path+"Matt.jpg",path+"Rachel.jpg",path+"Ellicott.PNG",path+"Guinea Pigs.jpg",path+"centennial.png",path+"Columbia.PNG"},
-															{path+"teacher.jpg",path+"chsroom.jpg",path+"student-crowd.png",path+"returning-student.png",path+"nutrition.png",path+"homework.png",path+"flashcards.png",path+"student-at-computer.png",path+"celebration.png",path+"centennial-graduation.png"},
-															{path+"Gender-Symbol.jpg",path+"Trans-Pride.jpg",path+"boy-and-girl-playing.jpg",path+"Gender-Dysphoria.jpg",path+"brain.jpg",path+"Transition.jpg",path+"career-collage.png",path+"Discrimination.png",path+"famous-transgender-people.png"}},
-															{{path+"ClipArtEarth.jpg",path+"planetEarth.jpg",path+"GSA.jpg",path+"OWL.jpg",path+"Trans-Lifeline.png",path+"support-group.png",path+"PFLAG-Picture.PNG",path+"pastoral-care.jpg"},
-															{path+"Chalice.png",path+"Menorah.png",path+"UUA-Logo.png",path+"Sunburst.png",path+"Seven-UU-Principles.png",path+"Religions-Collage.png",path+"UUCC.png"},
-															{path+"Boardgame.png",path+"Power-Grid.png",path+"Library.png",path+"Writing.png",path+"Sports.png",path+"Aerial-Silks.png",path+"Trail.png"}}};
+	private final String path = "slideshow\\";
+	private final String[][][] images = new String[][][] {{{"childhood.jpg","PrincetonMap.png","Nassau Hall.jpg","Amtrak.jpg","Plane.jpg","Jane.jpg","TravelCollage.jpg","Cat.jpg","watermelon-touramline.jpg","Littlebrook.PNG","Princeton-Day-School.PNG","Bucks-Rock.jpg","graduation.jpg"},
+															{"school.jpg","Brown.jpg","formula.jpg","IBM.jpg","StonyBrook.jpg","Generic-Diploma.jpg","Temp-ui.jpg"},
+															{"HubbleClipArt.jpg","maryland.png","STSI.jpg","hubble.jpg","JHU.jpg","Schedule.jpg","nebula.png","auditorium.jpg"}},
+															{{"family.jpg","wedding.png","timonium.png","Matt.jpg","Rachel.jpg","Ellicott.PNG","Guinea Pigs.jpg","centennial.png","Columbia.PNG"},
+															{"teacher.jpg","chsroom.jpg","student-crowd.png","returning-student.png","nutrition.png","homework.png","flashcards.png","student-at-computer.png","celebration.png","centennial-graduation.png"},
+															{"Gender-Symbol.jpg","Trans-Pride.jpg","boy-and-girl-playing.jpg","Gender-Dysphoria.jpg","brain.jpg","Transition.jpg","career-collage.png","Discrimination.png","famous-transgender-people.png"}},
+															{{"ClipArtEarth.jpg","planetEarth.jpg","GSA.jpg","OWL.jpg","Trans-Lifeline.png","support-group.png","PFLAG-Picture.PNG","pastoral-care.jpg"},
+															{"Chalice.png","Menorah.png","UUA-Logo.png","Sunburst.png","Seven-UU-Principles.png","Religions-Collage.png","UUCC.png"},
+															{"Boardgame.png","Power-Grid.png","Library.png","Writing.png","Sports.png","Aerial-Silks.png","Trail.png"}}};
 
 	private int row;
 	private int col;
@@ -38,7 +38,7 @@ public class MainScreen extends FlexiblePictureExplorer implements ImageObserver
 		for (int x = 0; x < 3; x++) {
 			for (int y = 0; y < 3; y++) {
 				Picture pict;
-				pict = new Picture(images[x][y][0]);
+				pict = new Picture(path + images[x][y][0]);
 				graphics.drawImage(pict.getBufferedImage(), 200*y, 200*x, this);
 			}
 		}
@@ -53,13 +53,13 @@ public class MainScreen extends FlexiblePictureExplorer implements ImageObserver
 		disp.setAllPixelsToAColor(Color.black);
 		Graphics2D graphics = disp.createGraphics();
 		//System.out.println("row:" + row + " col:" + col + " depth:" + depth);
-		Picture photo = new Picture(images[row][col][depth]);
+		Picture photo = new Picture(path + images[row][col][depth]);
 		int x = (600 - photo.getWidth())/2;
 		int y = (600 - photo.getHeight())/2;
 		graphics.drawImage(photo.getBufferedImage(), x, y, this);
-		Picture arrows = new Picture("src\\arrows.png");
-		Picture left = new Picture("src\\leftOnly.png");
-		Picture right = new Picture("src\\rightOnly.png");
+		Picture arrows = new Picture(path + "arrows.png");
+		Picture left = new Picture(path + "leftOnly.png");
+		Picture right = new Picture(path + "rightOnly.png");
 		if(depth == 1)
 			graphics.drawImage(right.getBufferedImage(),0,600,this);
 		else if(depth == images[row][col].length-1)
@@ -77,7 +77,7 @@ public class MainScreen extends FlexiblePictureExplorer implements ImageObserver
 			depth = 1;
 			displayPhoto(row,col,depth);
 		}
-		else if(pix.getY()>600){
+		if(!main && pix.getY()>600){
 			if(pix.getX()/200 == 0 && depth>1){
 				depth--;
 				displayPhoto(row,col,depth);
